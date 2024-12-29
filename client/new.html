@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Exercise app</title>
   </head>
   <body>
     <h1>New exercise</h1>
-    <form id = "newExerciseForm" method="post">
-        Name <input id="newExerciseFormName" name="name" type="text">
+    <form class="form-control" id = "newExerciseForm" method="post">
+        Name 
         <br>
-        Muscle <select id = "newExerciseFormMuscle" name="muscle">
+        <input id="newExerciseFormName" name="name" type="text">
+        <br>
+        Muscle <select class="form-select" id="newExerciseFormMuscle"name="muscle">
             <option value="chest">Chest</option>
             <option value="back">Back</option>
             <option value="legs">Legs</option>
@@ -20,13 +23,13 @@
             <option value="other">Other</option>
         </select>
         <br>
-        Difficulty <select id = "newExerciseFormDifficulty" name="difficulty">
+        Difficulty <select class="form-select" id = "newExerciseFormDifficulty" name="difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
         </select>
         <br>
-        Equipment <select id = "newExerciseFormEquipment" name="equipment">
+        Equipment <select class="form-select" id = "newExerciseFormEquipment" name="equipment">
             <option value="barbell">Barbell</option>
             <option value="dumbbell">Dumbbell</option>
             <option value="kettlebell">Kettlebell</option>
@@ -34,9 +37,13 @@
             <option value="other">Other</option>
         </select>
         <br>
-        Image (optional) <input id="newExerciseFormImage" name="image" type="file">
+        Image (optional) 
         <br>
-        <input id="newExerciseFormSubmit" name="submit" type="submit">
+        <input class="form-control" id="newExerciseFormImage" name="image" type="file">
+        <br>
+        <input class="btn" id="newExerciseFormSubmit" name="submit" type="submit">
     </form>
+    <script src="assets/dist/js/bootstrap.min.js"></script>
   </body>
+  
 </html>
