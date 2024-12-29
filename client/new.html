@@ -9,6 +9,7 @@
     <h1>New exercise</h1>
     <form id = "newExerciseForm" method="post">
         Name <input id="newExerciseFormName" name="name" type="text">
+        <br>
         Muscle <select id = "newExerciseFormMuscle" name="muscle">
             <option value="chest">Chest</option>
             <option value="back">Back</option>
@@ -18,11 +19,13 @@
             <option value="core">Core</option>
             <option value="other">Other</option>
         </select>
+        <br>
         Difficulty <select id = "newExerciseFormDifficulty" name="difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
         </select>
+        <br>
         Equipment <select id = "newExerciseFormEquipment" name="equipment">
             <option value="barbell">Barbell</option>
             <option value="dumbbell">Dumbbell</option>
@@ -30,7 +33,10 @@
             <option value="machine">Machine</option>
             <option value="other">Other</option>
         </select>
+        <br>
         Image (optional) <input id="newExerciseFormImage" name="image" type="file">
+        <br>
+        <input id="newExerciseFormSubmit" name="submit" type="submit">
     </form>
   </body>
 </html>
