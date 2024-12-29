@@ -8,7 +8,7 @@ let exercises = require("./data/exercises.json")
 console.log(exercises)
 
 app.get("/home", function(req, res){
-    res.sendFile(__dirname + "/client/index.html")
+    res.sendFile(__dirname + "/client/home.html")
 })
 
 app.get("/exercises", function(req,res){
