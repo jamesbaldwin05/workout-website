@@ -15,8 +15,8 @@ app.get("/exercises", function(req,res){
     res.send(exercises)
 })
 
-app.post("/new", function(req, res){
-    console.log(req.body)
+app.get("/new", function(req, res){
+    res.sendFile(__dirname + "/client/new.html")
 })
 
 module.exports = app;
