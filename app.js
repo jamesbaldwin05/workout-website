@@ -12,7 +12,11 @@ app.get("/home", function(req, res){
 })
 
 app.get("/exercises", function(req,res){
-    res.sendFile(__dirname + "/data/exercises.json")
+    res.send(exercises)
+})
+
+app.post("/new", function(req, res){
+    console.log(req.body)
 })
 
 module.exports = app;
