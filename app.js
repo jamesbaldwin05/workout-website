@@ -23,7 +23,7 @@ app.get("/exercises", function(req,res){
     res.send(exercises)
 })
 
-// Form to add new exercise
+// Get method to provide form to add new exercise
 app.get("/new", function(req, res){
     res.sendFile(__dirname + "/client/new.html")
 })
