@@ -1,0 +1,32 @@
+[
+  {},
+  {},
+  {
+    "name": "Chest Press",
+    "muscle": "chest",
+    "difficulty": "easy",
+    "equipment": "machine",
+    "image": ""
+  },
+  {
+    "name": "Chest Press",
+    "muscle": "chest",
+    "difficulty": "easy",
+    "equipment": "barbell",
+    "image": ""
+  },
+  {
+    "name": "Chest Press",
+    "muscle": "chest",
+    "difficulty": "medium",
+    "equipment": "machine",
+    "image": ""
+  },
+  {},
+  {
+    "name": "Chest",
+    "muscle": "Chest",
+    "difficulty": "Medium",
+    "equipment": "Machine"
+  }
+]
