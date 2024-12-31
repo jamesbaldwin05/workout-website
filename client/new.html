@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>New exercise</h1>
-    <form class="form-control" id = "newExerciseForm" method="post">
+    <form class="form-control" id = "newExerciseForm" method="POST" aciton="/submit">
         Name 
         <br>
         <input id="newExerciseFormName" name="name" type="text">
@@ -41,7 +41,7 @@
         <br>
         <input class="form-control" id="newExerciseFormImage" name="image" type="file">
         <br>
-        <input class="btn" id="newExerciseFormSubmit" name="submit" type="submit">
+        <button type="submit">Submit</button>
     </form>
     <script src="assets/dist/js/bootstrap.min.js"></script>
   </body>
