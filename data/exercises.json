@@ -1,5 +1,37 @@
-[{"name":"Bench Press","muscle":"Chest","difficulty":"Medium","equipment":"Barbell","image":"assets/img/benchpress.jpg"},
-{"name":"Sqaut","muscle":"Legs","difficulty":"Hard","equipment":"Barbell","image":"assets/img/squat.jpg"},
-{"name":"Sit Up","muscle":"Core","difficulty":"Easy","equipment":"None","image":"assets/img/situp.jpg"},
-{"name":"Lateral Raise","muscle":"Shoulders","difficulty":"Medium","equipment":"Dumbell","image":"assets/img/lateralraise.jpg"},
-{"name":"Push Up","muscle":"Chest","difficulty":"Easy","equipment":"None","image":"assets/img/pushup.jpg"}]
+[
+    {
+        "name":"Bench Press",
+        "muscle":"Chest",
+        "difficulty":"Medium",
+        "equipment":"Barbell",
+        "image":"assets/img/benchpress.jpg"
+    },
+    {
+        "name":"Sqaut",
+        "muscle":"Legs",
+        "difficulty":"Hard",
+        "equipment":"Barbell",
+        "image":"assets/img/squat.jpg"
+    },
+    {
+        "name":"Sit Up",
+        "muscle":"Core",
+        "difficulty":"Easy",
+        "equipment":"None",
+        "image":"assets/img/situp.jpg"
+    },
+    {
+        "name":"Lateral Raise",
+        "muscle":"Shoulders",
+        "difficulty":"Medium",
+        "equipment":"Dumbell",
+        "image":"assets/img/lateralraise.jpg"
+    },
+    {
+        "name":"Push Up",
+        "muscle":"Chest",
+        "difficulty":"Easy",
+        "equipment":"None",
+        "image":"assets/img/pushup.jpg"
+    }
+]

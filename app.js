@@ -29,8 +29,8 @@ app.post('/submit', (req, res) => {
 
     data.push(req.body)
     
-    fs.writeFileSync(__dirname + "/data/userexercises.json", JSON.stringify(data))
-    
+    fs.writeFileSync(__dirname + "/data/userexercises.json", JSON.stringify(data, null , 2))
+
     res.sendStatus(200)
 })
 
