@@ -21,13 +21,17 @@ app.get("/new", function(req, res){
 })
 
 app.post('/submit', (req, res) => {
-    const {name, muscle, difficulty, equipment} = req.body
+    let data = []
+    
+    if (!(fs.readFileSync(__dirname + "/data/userexercises.json") == "")){
+          data = JSON.parse(fs.readFileSync(__dirname + "/data/userexercises.json"))
+    }
 
-    const data = {name, muscle, difficulty, equipment}
-
+    data.push(req.body)
+    
     fs.writeFileSync(__dirname + "/data/userexercises.json", JSON.stringify(data))
-
-    res.send("Recieved the form data: Name -" + name + ", Muscle - " + muscle + ", Difficulty - " + difficulty + ", Equipment - " + equipment)
+    
+    res.sendStatus(200)
 })
 
 module.exports = app
