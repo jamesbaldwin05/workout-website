@@ -30,7 +30,6 @@ app.get("/new", function(req, res){
 
 // Post method to add new exercise
 app.post('/new', (req, res) => {
-    console.log(req.body)
     let data = []
     
     // If json file is currently not empty then the current file is loaded to ensure no data lost/written over with fs.writeFileSync
