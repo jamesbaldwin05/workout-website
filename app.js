@@ -7,7 +7,7 @@ const app = express()
 
 // Middleware for express to ensure JSON read correctly
 app.use(express.json()) // for testing purposes when I was using postman
-//app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:true}))
 app.use(express.static('client'))
 
 // Pre written exercises loaded to be used in exercise route
@@ -30,6 +30,7 @@ app.get("/new", function(req, res){
 
 // Post method to add new exercise
 app.post('/new', (req, res) => {
+    console.log(req.body)
     let data = []
     
     // If json file is currently not empty then the current file is loaded to ensure no data lost/written over with fs.writeFileSync
