@@ -1,0 +1,47 @@
+/* CSS styles created by generative AI */
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+#newExerciseForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#newExerciseForm input,
+#newExerciseForm select,
+#newExerciseForm button {
+    margin-bottom: 15px;
+}
+
+#newExerciseForm input,
+#newExerciseForm select {
+    width: 100%;
+}
+
+#newExerciseForm button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#newExerciseForm button:hover {
+    background-color: #0056b3;
+}

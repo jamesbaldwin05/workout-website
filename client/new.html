@@ -1,19 +1,24 @@
+<!-- Form divs and boostrap styling written by generative AI although everything else written by me -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
     <title>Exercise app</title>
   </head>
   <body>
-    <h1>New exercise</h1>
-    <form class="form-control" id = "newExerciseForm" method="POST" aciton="/new">
-        Name 
-        <br>
-        <input id="newExerciseFormName" name="name" type="text">
-        <br>
-        Muscle <select class="form-select" id="newExerciseFormMuscle"name="muscle">
+    <h1>New Exercise</h1>
+    <form class="form-control shadow-sm p-4" id="newExerciseForm" method="POST" action="/new">
+    <div class="mb-3">
+        <label for="newExerciseFormName" class="form-label">Name</label>
+        <input id="newExerciseFormName" name="name" type="text" class="form-control" placeholder="Enter exercise name">
+    </div>
+    <div class="mb-3">
+        <label for="newExerciseFormMuscle" class="form-label">Muscle</label>
+        <select class="form-select" id="newExerciseFormMuscle" name="muscle">
             <option value="Chest">Chest</option>
             <option value="Back">Back</option>
             <option value="Legs">Legs</option>
@@ -22,26 +27,32 @@
             <option value="Core">Core</option>
             <option value="Other">Other</option>
         </select>
-        <br>
-        Difficulty <select class="form-select" id = "newExerciseFormDifficulty" name="difficulty">
+    </div>
+    <div class="mb-3">
+        <label for="newExerciseFormDifficulty" class="form-label">Difficulty</label>
+        <select class="form-select" id="newExerciseFormDifficulty" name="difficulty">
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
         </select>
-        <br>
-        Equipment <select class="form-select" id = "newExerciseFormEquipment" name="equipment">
+    </div>
+    <div class="mb-3">
+        <label for="newExerciseFormEquipment" class="form-label">Equipment</label>
+        <select class="form-select" id="newExerciseFormEquipment" name="equipment">
             <option value="Barbell">Barbell</option>
             <option value="Dumbbell">Dumbbell</option>
             <option value="Kettlebell">Kettlebell</option>
             <option value="Machine">Machine</option>
             <option value="Other">Other</option>
         </select>
-        <br>
-        Image (optional) 
-        <br>
+    </div>
+    <div class="mb-3">
+        <label for="newExerciseFormImage" class="form-label">Image (optional). Must be a URL.</label>
         <input class="form-control" id="newExerciseFormImage" name="image" type="file">
-        <br>
-        <button type="submit">Submit</button>
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
     </form>
     <script src="assets/dist/js/bootstrap.min.js"></script>
   </body>
