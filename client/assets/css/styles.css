@@ -1,47 +1,75 @@
 /* CSS styles created by generative AI */
 
 body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+    background-color: #eef1f5; /* Soft warm gray-blue background */
+    font-family: 'Helvetica Neue', sans-serif;
     padding: 20px;
+    color: #2c2f33; /* Neutral dark gray for text */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #343a40;
+    color: #4a5568; /* Muted slate gray for the heading */
 }
 
 #newExerciseForm {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d3d6db; /* Light neutral gray border */
+    border-radius: 15px;
+    background-color: #ffffff; /* Clean white form background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 #newExerciseForm input,
 #newExerciseForm select,
 #newExerciseForm button {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 #newExerciseForm input,
 #newExerciseForm select {
     width: 100%;
+    border: 1px solid #c7ccd1; /* Soft neutral gray border */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #2c2f33; /* Neutral dark gray text */
+    background-color: #f9fafb; /* Light neutral gray background */
+}
+
+#newExerciseForm input:focus,
+#newExerciseForm select:focus {
+    outline: none;
+    border-color: #718096; /* Slightly darker slate gray on focus */
+    box-shadow: 0 0 8px rgba(113, 128, 150, 0.2);
 }
 
 #newExerciseForm button {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #4a5568; /* Muted slate gray button */
+    color: #ffffff; /* White text */
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #newExerciseForm button:hover {
-    background-color: #0056b3;
+    background-color: #2d3748; /* Darker slate gray on hover */
+    transform: scale(1.03);
+}
+
+#newExerciseForm label {
+    color: #4a5568; /* Muted slate gray for labels */
+    font-weight: bold;
+}
+
+#newExerciseForm input[type="file"] {
+    border: none;
+    padding-left: 0;
+    color: #718096; /* Matching file input color */
 }
