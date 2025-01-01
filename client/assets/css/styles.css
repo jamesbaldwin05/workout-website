@@ -67,9 +67,3 @@ h1 {
     color: #4a5568; /* Muted slate gray for labels */
     font-weight: bold;
 }
-
-#newExerciseForm input[type="file"] {
-    border: none;
-    padding-left: 0;
-    color: #718096; /* Matching file input color */
-}

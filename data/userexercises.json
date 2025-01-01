@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Chest Press",
+    "muscle": "Chest",
+    "difficulty": "Medium",
+    "equipment": "Machine",
+    "image": ""
+  },
+  {
+    "name": "Bicep Curl",
+    "muscle": "Arms",
+    "difficulty": "Easy",
+    "equipment": "Dumbbell",
+    "image": ""
+  }
+]

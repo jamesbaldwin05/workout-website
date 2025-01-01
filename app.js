@@ -7,11 +7,8 @@ const app = express()
 
 // Middleware for express to ensure JSON read correctly
 app.use(express.json()) // for testing purposes when I was using postman
-app.use(express.urlencoded({extended:true}))
-app.use(express.static('client'))
-
-// Pre written exercises loaded to be used in exercise route
-let exercises = require("./data/exercises.json")
+app.use(express.urlencoded({extended:true})) // To ensure JSON read correctly from post method
+app.use(express.static('client')) // To ensure bootstrap loaded correctly
 
 // Homepage route
 app.get("/home", function(req, res){
@@ -20,7 +17,12 @@ app.get("/home", function(req, res){
 
 // Exercise route
 app.get("/exercises", function(req,res){
-    res.send(exercises)
+    res.sendFile(__dirname + "/data/exercises.json")
+})
+
+// User Exercise route
+app.get("/userexercises", function(req,res){
+    res.sendFile(__dirname + "/data/userexercises.json")
 })
 
 // Get method to provide form to add new exercise
