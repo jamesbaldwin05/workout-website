@@ -1,20 +1,6 @@
 /* CSS styles created by generative AI */
 
-body {
-    background-color: #eef1f5; /* Soft warm gray-blue background */
-    font-family: 'Helvetica Neue', sans-serif;
-    padding: 20px;
-    color: #2c2f33; /* Neutral dark gray for text */
-    margin: 0; /* Remove default margin */
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #4a5568; /* Muted slate gray for the heading */
-}
-
-#exerciseTable {
+#userExerciseTable {
     width: 80%; /* Table takes up 80% of the page width */
     max-width: 1200px; /* Maximum width for large screens */
     margin: 0 auto; /* Center the table horizontally */
@@ -23,28 +9,28 @@ h1 {
     border-collapse: collapse; /* Ensures proper spacing between cells */
 }
 
-#exerciseTable th,
-#exerciseTable td {
+#userExerciseTable th,
+#userExerciseTable td {
     padding: 12px 15px;
     text-align: left;
     color: #2c2f33; /* Neutral dark gray text */
 }
 
-#exerciseTable th {
+#userExerciseTable th {
     background-color: #f9fafb; /* Light gray background for headers */
     color: #4a5568; /* Muted slate gray text */
     font-weight: bold;
 }
 
-#exerciseTable td {
+#userExerciseTable td {
     background-color: #f9fafb; /* Light neutral gray for table rows */
 }
 
-#exerciseTable tr:nth-child(even) {
+#userExerciseTable tr:nth-child(even) {
     background-color: #f1f5f9; /* Slightly darker gray for even rows */
 }
 
-#exerciseTable td img {
+#userExerciseTable td img {
     width: 15rem; /* Increased image size to 7rem */
     height: auto; /* Matching height for square image */
     max-width: 100%;
@@ -53,19 +39,19 @@ h1 {
 }
 
 /* Increase image column size */
-#exerciseTable td:nth-child(5) {
+#userExerciseTable td:nth-child(5) {
     width: 20%; /* Adjusted image column width to fit larger images */
 }
 
 /* Adjust other text columns to make space for the image */
-#exerciseTable td:nth-child(1), /* Name column */
-#exerciseTable td:nth-child(2), /* Muscle group column */
-#exerciseTable td:nth-child(3), /* Difficulty column */
-#exerciseTable td:nth-child(4) { /* Equipment column */
+#userExerciseTable td:nth-child(1),
+#userExerciseTable td:nth-child(2),
+#userExerciseTable td:nth-child(3),
+#userExerciseTable td:nth-child(4) { 
     width: 19%; /* Reduced the width of text columns to balance with larger image */
 }
 
-#exerciseTable tr:hover {
+#userExerciseTable tr:hover {
     background-color: #e2e8f0; /* Light blue-gray on row hover */
 }
 
@@ -75,25 +61,25 @@ h1 {
         padding: 10px; /* Adjust padding on smaller screens */
     }
 
-    #exerciseTable th,
-    #exerciseTable td {
+    #userExerciseTable th,
+    #userExerciseTable td {
         padding: 10px; /* Adjust padding for smaller screens */
         font-size: 0.9rem; /* Adjust font size for better readability */
     }
 
-    #exerciseTable td img {
+    #userExerciseTable td img {
         width: 6rem; /* Adjust image size for small screens */
         height: 6rem;
     }
 
-    #exerciseTable td:nth-child(5) {
+    #userExerciseTable td:nth-child(5) {
         width: 22%; /* Slightly larger image column for small screens */
     }
 
-    #exerciseTable td:nth-child(1),
-    #exerciseTable td:nth-child(2),
-    #exerciseTable td:nth-child(3),
-    #exerciseTable td:nth-child(4) {
+    #userExerciseTable td:nth-child(1),
+    #userExerciseTable td:nth-child(2),
+    #userExerciseTable td:nth-child(3),
+    #userExerciseTable td:nth-child(4) {
         width: 19%; /* Adjust text columns for better fit on smaller screens */
     }
 }
