@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", buildTables)
 
 function buildTables() {
-    fetch("http://localhost:3000/exercises")
+    fetch("http://localhost:3000/api/exercises")
         .then(response => response.json())
         .then(data => {
             let tableBody = document.querySelector("#exerciseTable tbody")
@@ -34,7 +34,7 @@ function buildTables() {
             })
         })
 
-    fetch("http://localhost:3000/userexercises")
+    fetch("http://localhost:3000/api/userexercises")
         .then(response => response.json())
         .then(data => {
             let tableBody = document.querySelector("#userExerciseTable tbody")

@@ -16,12 +16,23 @@ app.get("/home", function(req, res){
 })
 
 // Exercise route
-app.get("/exercises", function(req,res){
+app.get("/exercises", function(req, res){
+    res.sendFile(__dirname + "/client/exercises.html")
+})
+
+// User exercise route
+app.get("/userexercises", function(req, res){
+    res.sendFile(__dirname + "/client/userexercises.html")
+})
+
+
+// Exercise API route
+app.get("/api/exercises", function(req,res){
     res.sendFile(__dirname + "/data/exercises.json")
 })
 
-// User Exercise route
-app.get("/userexercises", function(req,res){
+// User Exercise API route
+app.get("/api/userexercises", function(req,res){
     res.sendFile(__dirname + "/data/userexercises.json")
 })
 
