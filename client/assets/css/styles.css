@@ -1,10 +1,14 @@
 /* CSS styles created by generative AI */
 
 body {
-    background-color: #eef1f5; /* Soft warm gray-blue background */
+    background-color: #eef1f5;
     font-family: 'Helvetica Neue', sans-serif;
     padding: 20px;
-    color: #2c2f33; /* Neutral dark gray for text */
+    color: #2c2f33;
+    display: flex;
+    flex-direction: column; /* Align the content vertically */
+    min-height: 100vh; /* Ensure the body takes full height */
+    justify-content: space-between; /* Distribute space between content */
 }
 
 h1,
@@ -172,5 +176,10 @@ p {
     #userExerciseTable td:nth-child(3),
     #userExerciseTable td:nth-child(4) {
         width: 19%; /* Adjust text columns for better fit on smaller screens */
+    }
+
+    button {
+        padding: 10px 15px;  /* Adjust padding for better touch targets */
+        font-size: 0.9rem;    /* Adjust font size for smaller screens */
     }
 }

@@ -9,10 +9,6 @@ const app = express()
 app.use(express.json()) // for testing purposes when I was using postman
 app.use(express.urlencoded({extended:true})) // To ensure JSON read correctly from post method
 app.use(express.static('client')) // To ensure bootstrap loaded correctly
-app.use((req,res) =>
-    res.status(404).send("404 not found. The requested resource was not found")
-) // Any url without a route results in a 404 error.
-
 
 // Homepage route
 app.get("/home", function(req, res){
@@ -21,53 +17,18 @@ app.get("/home", function(req, res){
 
         // If there is an error accessing the file then a 404 is sent
         if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
+            return res.status(404).send("404 not found. The requested resource was not found 222 ")
         }
         res.status(200).sendFile(__dirname + "/client/index.html")
     })
 })
 
-
-// Exercise API route
-app.get("/api/exercises", (req,res) => {
-    fs.access(__dirname + "/data/exercises.json", fs.constants.F_OK, (err) => {
-
-        if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
-        }
-        res.status(200).sendFile(__dirname + "/data/exercises.json")
-    })
-})
-
-// User Exercise API route
-app.get("/api/userexercises", (req,res) => {
-    fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
-
-        if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
-        }
-        res.status(200).sendFile(__dirname + "/data/userexercises.json")
-    })
-})
-
-// Get method to provide form to add new exercise
-app.get("/new", (req, res) => {
-    fs.access(__dirname + "/client/new.html", fs.constants.F_OK, (err) => {
-
-        if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
-        }
-        res.status(200).sendFile(__dirname + "/client/new.html")
-    })
-    res.sendFile(__dirname + "/client/new.html")
-})
-
 // Post method to add new exercise
-app.post('/new', (req, res) => {
+app.post('/home', (req, res) => {
     fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
 
         if (err) {
-            res.status(404).send("404 not found. The requested resource was not found")
+            res.status(404).send("404 not found. The requested resource was not found 666")
         }
         let data = []
     
@@ -83,7 +44,29 @@ app.post('/new', (req, res) => {
         fs.writeFileSync(__dirname + "/data/userexercises.json", JSON.stringify(data, null , 2))
 
         // OK status sent
-        res.status(200).send("New exercise added successfully.")
+        res.status(200).sendFile(__dirname + "/client/index.html")
+    })
+})
+
+// Exercise API route
+app.get("/api/exercises", (req,res) => {
+    fs.access(__dirname + "/data/exercises.json", fs.constants.F_OK, (err) => {
+
+        if (err) {
+            return res.status(404).send("404 not found. The requested resource was not found 333")
+        }
+        res.status(200).sendFile(__dirname + "/data/exercises.json")
+    })
+})
+
+// User Exercise API route
+app.get("/api/userexercises", (req,res) => {
+    fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
+
+        if (err) {
+            return res.status(404).send("404 not found. The requested resource was not found 444")
+        }
+        res.status(200).sendFile(__dirname + "/data/userexercises.json")
     })
 })
 

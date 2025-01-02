@@ -19,5 +19,12 @@
     "difficulty": "Medium",
     "equipment": "Machine",
     "image": ""
+  },
+  {
+    "name": "Tricep Pushdown",
+    "muscle": "Arms",
+    "difficulty": "Easy",
+    "equipment": "Machine",
+    "image": ""
   }
 ]
