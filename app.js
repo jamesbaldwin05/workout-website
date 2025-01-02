@@ -87,7 +87,7 @@ app.get("/new", (req, res) => {
 // Post method to add new exercise
 app.post('/new', (req, res) => {
     fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
-        
+
         if (err) {
             res.status(404).send("404 not found. The requested resource was not found")
         }

@@ -46,6 +46,11 @@ function buildTables() {
             })
         })
 
+        .catch((err) =>
+            console.error("There was an issue fetching the data: ", err)
+        )
+
+
     // Same as above for the second table
     fetch("http://localhost:3000/api/userexercises")
         .then(response => response.json())
@@ -79,4 +84,8 @@ function buildTables() {
                 tableBody.appendChild(row)
             })
         })
+        .catch((err) =>
+            console.error("There was an issue fetching the data: ", err)
+        )
+
 }
