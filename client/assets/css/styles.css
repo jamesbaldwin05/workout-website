@@ -64,7 +64,7 @@ p {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#newExerciseForm button:hover {
+button:hover, #newExerciseForm button:hover {
     background-color: #2d3748; /* Darker slate gray on hover */
     transform: scale(1.03);
 }
@@ -182,4 +182,24 @@ p {
         padding: 10px 15px;  /* Adjust padding for better touch targets */
         font-size: 0.9rem;    /* Adjust font size for smaller screens */
     }
+}
+
+button {
+    background-color: #4a5568; /* Muted slate gray button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 16px 40px; /* Increased vertical (16px) and horizontal (40px) padding */
+    font-size: 1rem; /* Maintain or adjust if needed */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+newFormDiv body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }

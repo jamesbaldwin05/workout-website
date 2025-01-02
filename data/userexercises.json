@@ -26,5 +26,12 @@
     "difficulty": "Easy",
     "equipment": "Machine",
     "image": ""
+  },
+  {
+    "name": "Shoulder Press",
+    "muscle": "Shoulders",
+    "difficulty": "Medium",
+    "equipment": "Dumbbell",
+    "image": ""
   }
 ]
