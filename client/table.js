@@ -1,11 +1,21 @@
+// Once DOM content loaded the tables are populated
 document.addEventListener("DOMContentLoaded", buildTables)
 
+// Function to fill tables
 function buildTables() {
+
+    // Fetch the JSON data from the API
     fetch("http://localhost:3000/api/exercises")
+
+        // Parse data
         .then(response => response.json())
+
+        // Populate table
         .then(data => {
+            // Select the body of the table to fill
             let tableBody = document.querySelector("#exerciseTable tbody")
 
+            // For each JSON object create a row and fill it with the data
             data.forEach(item => {
                 let row = document.createElement("tr")
                 
@@ -30,10 +40,13 @@ function buildTables() {
                 image.src = item.image
                 imageHead.appendChild(image)
                 row.appendChild(imageHead)
+
+                // Row added to table once filled
                 tableBody.appendChild(row)
             })
         })
 
+    // Same as above for the second table
     fetch("http://localhost:3000/api/userexercises")
         .then(response => response.json())
         .then(data => {
