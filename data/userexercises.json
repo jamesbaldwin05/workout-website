@@ -12,5 +12,12 @@
     "difficulty": "Easy",
     "equipment": "Dumbbell",
     "image": ""
+  },
+  {
+    "name": "Hack Squat",
+    "muscle": "Legs",
+    "difficulty": "Medium",
+    "equipment": "Machine",
+    "image": ""
   }
 ]
