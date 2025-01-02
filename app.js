@@ -17,35 +17,13 @@ app.use((req,res) =>
 // Homepage route
 app.get("/home", function(req, res){
     // Test whether file can be accessed, if it can then it is sent
-    fs.access(__dirname + "/client/home.html", fs.constants.F_OK, (err) => {
+    fs.access(__dirname + "/client/index.html", fs.constants.F_OK, (err) => {
 
         // If there is an error accessing the file then a 404 is sent
         if (err) {
             return res.status(404).send("404 not found. The requested resource was not found")
         }
-        res.status(200).sendFile(__dirname + "/client/home.html")
-    })
-})
-
-// Exercise route
-app.get("/exercises", (req, res) => {
-    fs.access(__dirname + "/client/exercises.html", fs.constants.F_OK, (err) => {
-
-        if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
-        }
-        res.status(200).sendFile(__dirname + "/client/exercises.html")
-    })
-})
-
-// User exercise route
-app.get("/userexercises", (req, res) => {
-    fs.access(__dirname + "/client/userexercises.html", fs.constants.F_OK, (err) => {
-
-        if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found")
-        }
-        res.status(200).sendFile(__dirname + "/client/userexercises.html")
+        res.status(200).sendFile(__dirname + "/client/index.html")
     })
 })
 

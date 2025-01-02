@@ -1,5 +1,76 @@
 /* CSS styles created by generative AI */
 
+body {
+    background-color: #eef1f5; /* Soft warm gray-blue background */
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    color: #2c2f33; /* Neutral dark gray for text */
+}
+
+h1,
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a5568; /* Muted slate gray for the heading */
+    margin: 0;
+}
+
+#newExerciseForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #d3d6db; /* Light neutral gray border */
+    border-radius: 15px;
+    background-color: #ffffff; /* Clean white form background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#newExerciseForm input,
+#newExerciseForm select,
+#newExerciseForm button {
+    margin-bottom: 20px;
+}
+
+#newExerciseForm input,
+#newExerciseForm select {
+    width: 100%;
+    border: 1px solid #c7ccd1; /* Soft neutral gray border */
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #2c2f33; /* Neutral dark gray text */
+    background-color: #f9fafb; /* Light neutral gray background */
+}
+
+#newExerciseForm input:focus,
+#newExerciseForm select:focus {
+    outline: none;
+    border-color: #718096; /* Slightly darker slate gray on focus */
+    box-shadow: 0 0 8px rgba(113, 128, 150, 0.2);
+}
+
+#newExerciseForm button {
+    background-color: #4a5568; /* Muted slate gray button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#newExerciseForm button:hover {
+    background-color: #2d3748; /* Darker slate gray on hover */
+    transform: scale(1.03);
+}
+
+#newExerciseForm label {
+    color: #4a5568; /* Muted slate gray for labels */
+    font-weight: bold;
+}
+
+#exerciseTable,
 #userExerciseTable {
     width: 80%; /* Table takes up 80% of the page width */
     max-width: 1200px; /* Maximum width for large screens */
@@ -9,6 +80,8 @@
     border-collapse: collapse; /* Ensures proper spacing between cells */
 }
 
+#exerciseTable th,
+#exerciseTable td,
 #userExerciseTable th,
 #userExerciseTable td {
     padding: 12px 15px;
@@ -16,20 +89,24 @@
     color: #2c2f33; /* Neutral dark gray text */
 }
 
+#exerciseTable th,
 #userExerciseTable th {
     background-color: #f9fafb; /* Light gray background for headers */
     color: #4a5568; /* Muted slate gray text */
     font-weight: bold;
 }
 
+#exerciseTable td,
 #userExerciseTable td {
     background-color: #f9fafb; /* Light neutral gray for table rows */
 }
 
+#exerciseTable tr:nth-child(even),
 #userExerciseTable tr:nth-child(even) {
     background-color: #f1f5f9; /* Slightly darker gray for even rows */
 }
 
+#exerciseTable td img,
 #userExerciseTable td img {
     width: 15rem; /* Increased image size to 7rem */
     height: auto; /* Matching height for square image */
@@ -39,11 +116,16 @@
 }
 
 /* Increase image column size */
+#exerciseTable td:nth-child(5),
 #userExerciseTable td:nth-child(5) {
     width: 20%; /* Adjusted image column width to fit larger images */
 }
 
 /* Adjust other text columns to make space for the image */
+#exerciseTable td:nth-child(1),
+#exerciseTable td:nth-child(2),
+#exerciseTable td:nth-child(3),
+#exerciseTable td:nth-child(4),
 #userExerciseTable td:nth-child(1),
 #userExerciseTable td:nth-child(2),
 #userExerciseTable td:nth-child(3),
@@ -51,6 +133,7 @@
     width: 19%; /* Reduced the width of text columns to balance with larger image */
 }
 
+#exerciseTable tr:hover,
 #userExerciseTable tr:hover {
     background-color: #e2e8f0; /* Light blue-gray on row hover */
 }
@@ -61,21 +144,29 @@
         padding: 10px; /* Adjust padding on smaller screens */
     }
 
+    #exerciseTable th,
+    #exerciseTable td,
     #userExerciseTable th,
     #userExerciseTable td {
         padding: 10px; /* Adjust padding for smaller screens */
         font-size: 0.9rem; /* Adjust font size for better readability */
     }
 
+    #exerciseTable td img,
     #userExerciseTable td img {
         width: 6rem; /* Adjust image size for small screens */
         height: 6rem;
     }
 
+    #exerciseTable td:nth-child(5),
     #userExerciseTable td:nth-child(5) {
         width: 22%; /* Slightly larger image column for small screens */
     }
 
+    #exerciseTable td:nth-child(1),
+    #exerciseTable td:nth-child(2),
+    #exerciseTable td:nth-child(3),
+    #exerciseTable td:nth-child(4),
     #userExerciseTable td:nth-child(1),
     #userExerciseTable td:nth-child(2),
     #userExerciseTable td:nth-child(3),
