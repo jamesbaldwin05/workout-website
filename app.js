@@ -6,9 +6,9 @@ const fs = require("fs");
 const app = express();
 
 // Middleware for express to ensure JSON read correctly
-app.use(express.json()); // for testing purposes when I was using postman
+app.use(express.json()); // for testing purposes when using postman
 app.use(express.urlencoded({extended:true})); // To ensure JSON read correctly from post method
-app.use(express.static('client')); // To ensure bootstrap loaded correctly
+app.use(express.static('client')); // To ensure bootstrap loads correctly
 
 // Homepage route
 app.get("/home", function(req, res){
