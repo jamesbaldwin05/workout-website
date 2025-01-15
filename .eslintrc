@@ -1,7 +1,13 @@
 {
-    "extends": "standard",
     "rules": {
       "semi": ["error", "always"],
       "indent": "off"
-    }
+    },
+    "env": {
+      "node": true,
+      "jest": true,
+      "browser": true,
+      "es2021": true
+    },
+    "ignorePatterns": ["client/assets/dist"]
   }
