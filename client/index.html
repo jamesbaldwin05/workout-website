@@ -50,6 +50,36 @@
         <div class="text-center">
             <button onclick="location.href='new.html'">New Exercise</button>
         </div>
+
+        <div class="container mt-4">
+            <div class="comment-section">
+                <div class="post-comment border p-3 rounded mb-3 bg-light">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="user-meta">
+                            <h5 class="m-0">James</h5>
+                            <small class="text-muted">10 days ago</small>
+                        </div>
+                    </div>
+                    <div class="comment-post mt-2 text-start">
+                        <p class="m-0">Test</p>
+                    </div>
+                </div>
+
+                <form action="/comment" method="POST" class="border p-3 rounded bg-light">
+                    <div class="mb-3">
+                        <textarea 
+                            name="comment" 
+                            class="form-control" 
+                            cols="30" 
+                            rows="3" 
+                            placeholder="Your message"
+                        ></textarea>
+                    </div>
+                    <button >Comment</button>
+                </form>
+            </div>
+        </div>
+
         <script src="assets/dist/js/bootstrap.min.js"></script>
     </body>
 </html>

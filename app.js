@@ -17,7 +17,7 @@ app.get("/home", function(req, res){
 
         // If there is an error accessing the file then a 404 is sent
         if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found 222 ");
+            return res.status(404).send("404 not found. The requested resource was not found");
         }
         res.status(200).sendFile(__dirname + "/client/index.html");
     });
@@ -28,7 +28,7 @@ app.post('/home', (req, res) => {
     fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
 
         if (err) {
-            res.status(404).send("404 not found. The requested resource was not found 666");
+            res.status(404).send("404 not found. The requested resource was not found");
         }
         let data = [];
     
@@ -48,12 +48,37 @@ app.post('/home', (req, res) => {
     });
 });
 
+// Post method to add new comment
+app.post('/comment', (req, res) => {
+    fs.access(__dirname + "/data/comments.json", fs.constants.F_OK, (err) => {
+
+        if (err) {
+            res.status(404).send("404 not found. The requested resource was not found");
+        }
+        let data = [];
+    
+        // If json file is currently not empty then the current file is loaded to ensure no data lost/written over with fs.writeFileSync
+        if (!(fs.readFileSync(__dirname + "/data/comments.json") == "")){
+            data = JSON.parse(fs.readFileSync(__dirname + "/data/comments.json"));
+        }
+
+        // New comment added
+        data.push(req.body);
+        
+        // Data written back to file
+        fs.writeFileSync(__dirname + "/data/comments.json", JSON.stringify(data, null , 2));
+
+        // OK status sent
+        res.status(200).sendFile(__dirname + "/client/index.html");
+    });
+});
+
 // Exercise API route
 app.get("/api/exercises", (req,res) => {
     fs.access(__dirname + "/data/exercises.json", fs.constants.F_OK, (err) => {
 
         if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found 333");
+            return res.status(404).send("404 not found. The requested resource was not found");
         }
         res.status(200).sendFile(__dirname + "/data/exercises.json");
     });
@@ -64,7 +89,7 @@ app.get("/api/userexercises", (req,res) => {
     fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
 
         if (err) {
-            return res.status(404).send("404 not found. The requested resource was not found 444");
+            return res.status(404).send("404 not found. The requested resource was not found");
         }
         res.status(200).sendFile(__dirname + "/data/userexercises.json");
     });

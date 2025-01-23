@@ -203,3 +203,7 @@ newFormDiv body{
     min-height: 100vh;
     margin: 0;
 }
+
+.comment-post {
+    text-align: left;
+}
