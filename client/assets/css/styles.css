@@ -6,16 +6,16 @@ body {
     padding: 20px;
     color: #2c2f33;
     display: flex;
-    flex-direction: column; /* Align the content vertically */
-    min-height: 100vh; /* Ensure the body takes full height */
-    justify-content: space-between; /* Distribute space between content */
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }
 
 h1,
 p {
     text-align: center;
     margin-bottom: 20px;
-    color: #4a5568; /* Muted slate gray for the heading */
+    color: #4a5568;
     margin: 0;
 }
 
@@ -23,9 +23,9 @@ p {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #d3d6db; /* Light neutral gray border */
+    border: 1px solid #d3d6db;
     border-radius: 15px;
-    background-color: #ffffff; /* Clean white form background */
+    background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -38,24 +38,24 @@ p {
 #newExerciseForm input,
 #newExerciseForm select {
     width: 100%;
-    border: 1px solid #c7ccd1; /* Soft neutral gray border */
+    border: 1px solid #c7ccd1;
     border-radius: 10px;
     padding: 10px;
     font-size: 1rem;
-    color: #2c2f33; /* Neutral dark gray text */
-    background-color: #f9fafb; /* Light neutral gray background */
+    color: #2c2f33;
+    background-color: #f9fafb;
 }
 
 #newExerciseForm input:focus,
 #newExerciseForm select:focus {
     outline: none;
-    border-color: #718096; /* Slightly darker slate gray on focus */
+    border-color: #718096;
     box-shadow: 0 0 8px rgba(113, 128, 150, 0.2);
 }
 
 #newExerciseForm button {
-    background-color: #4a5568; /* Muted slate gray button */
-    color: #ffffff; /* White text */
+    background-color: #4a5568;
+    color: #ffffff;
     border: none;
     padding: 12px;
     font-size: 1rem;
@@ -65,23 +65,23 @@ p {
 }
 
 button:hover, #newExerciseForm button:hover {
-    background-color: #2d3748; /* Darker slate gray on hover */
+    background-color: #2d3748;
     transform: scale(1.03);
 }
 
 #newExerciseForm label {
-    color: #4a5568; /* Muted slate gray for labels */
+    color: #4a5568;
     font-weight: bold;
 }
 
 #exerciseTable,
 #userExerciseTable {
-    width: 80%; /* Table takes up 80% of the page width */
-    max-width: 1200px; /* Maximum width for large screens */
-    margin: 0 auto; /* Center the table horizontally */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-collapse: collapse; /* Ensures proper spacing between cells */
+    border-collapse: collapse;
 }
 
 #exerciseTable th,
@@ -90,42 +90,40 @@ button:hover, #newExerciseForm button:hover {
 #userExerciseTable td {
     padding: 12px 15px;
     text-align: left;
-    color: #2c2f33; /* Neutral dark gray text */
+    color: #2c2f33;
 }
 
 #exerciseTable th,
 #userExerciseTable th {
-    background-color: #f9fafb; /* Light gray background for headers */
-    color: #4a5568; /* Muted slate gray text */
+    background-color: #f9fafb;
+    color: #4a5568;
     font-weight: bold;
 }
 
 #exerciseTable td,
 #userExerciseTable td {
-    background-color: #f9fafb; /* Light neutral gray for table rows */
+    background-color: #f9fafb;
 }
 
 #exerciseTable tr:nth-child(even),
 #userExerciseTable tr:nth-child(even) {
-    background-color: #f1f5f9; /* Slightly darker gray for even rows */
+    background-color: #f1f5f9;
 }
 
 #exerciseTable td img,
 #userExerciseTable td img {
-    width: 15rem; /* Increased image size to 7rem */
-    height: auto; /* Matching height for square image */
+    width: 15rem;
+    height: auto;
     max-width: 100%;
     display: block;
     margin: 0 auto;
 }
 
-/* Increase image column size */
 #exerciseTable td:nth-child(5),
 #userExerciseTable td:nth-child(5) {
-    width: 20%; /* Adjusted image column width to fit larger images */
+    width: 20%;
 }
 
-/* Adjust other text columns to make space for the image */
 #exerciseTable td:nth-child(1),
 #exerciseTable td:nth-child(2),
 #exerciseTable td:nth-child(3),
@@ -134,37 +132,37 @@ button:hover, #newExerciseForm button:hover {
 #userExerciseTable td:nth-child(2),
 #userExerciseTable td:nth-child(3),
 #userExerciseTable td:nth-child(4) { 
-    width: 19%; /* Reduced the width of text columns to balance with larger image */
+    width: 19%;
 }
 
 #exerciseTable tr:hover,
 #userExerciseTable tr:hover {
-    background-color: #e2e8f0; /* Light blue-gray on row hover */
+    background-color: #e2e8f0;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* Adjust padding on smaller screens */
+        padding: 10px;
     }
 
     #exerciseTable th,
     #exerciseTable td,
     #userExerciseTable th,
     #userExerciseTable td {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: 0.9rem; /* Adjust font size for better readability */
+        padding: 10px;
+        font-size: 0.9rem;
     }
 
     #exerciseTable td img,
     #userExerciseTable td img {
-        width: 6rem; /* Adjust image size for small screens */
+        width: 6rem;
         height: 6rem;
     }
 
     #exerciseTable td:nth-child(5),
     #userExerciseTable td:nth-child(5) {
-        width: 22%; /* Slightly larger image column for small screens */
+        width: 22%;
     }
 
     #exerciseTable td:nth-child(1),
@@ -175,21 +173,21 @@ button:hover, #newExerciseForm button:hover {
     #userExerciseTable td:nth-child(2),
     #userExerciseTable td:nth-child(3),
     #userExerciseTable td:nth-child(4) {
-        width: 19%; /* Adjust text columns for better fit on smaller screens */
+        width: 19%;
     }
 
     button {
-        padding: 10px 15px;  /* Adjust padding for better touch targets */
-        font-size: 0.9rem;    /* Adjust font size for smaller screens */
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }
 
 button {
-    background-color: #4a5568; /* Muted slate gray button */
-    color: #ffffff; /* White text */
+    background-color: #4a5568;
+    color: #ffffff;
     border: none;
-    padding: 16px 40px; /* Increased vertical (16px) and horizontal (40px) padding */
-    font-size: 1rem; /* Maintain or adjust if needed */
+    padding: 16px 40px;
+    font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -204,6 +202,110 @@ newFormDiv body{
     margin: 0;
 }
 
+form {
+    max-width: 600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d3d6db;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 1px solid #c7ccd1;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    background-color: #f9fafb;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #718096;
+    box-shadow: 0 0 8px rgba(113, 128, 150, 0.2);
+}
+
+form button {
+    background-color: #4a5568;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2d3748;
+    transform: scale(1.03);
+}
+
+.comment-section {
+    max-width: 800px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d3d6db;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-comment {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.user-meta {
+    margin-bottom: 5px;
+}
+
+.user-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4a5568;
+}
+
 .comment-post {
-    text-align: left;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.post-comment:hover {
+    background-color: #e2e8f0;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .comment-section {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .post-comment {
+        padding: 10px;
+    }
+
+    .user-name {
+        font-size: 1rem;
+    }
+
+    .comment-post {
+        font-size: 0.875rem;
+    }
 }

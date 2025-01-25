@@ -49,7 +49,7 @@ app.post('/home', (req, res) => {
 });
 
 // Post method to add new comment
-app.post('/comment', (req, res) => {
+app.post("/comment", (req, res) => {
     fs.access(__dirname + "/data/comments.json", fs.constants.F_OK, (err) => {
 
         if (err) {
@@ -69,7 +69,7 @@ app.post('/comment', (req, res) => {
         fs.writeFileSync(__dirname + "/data/comments.json", JSON.stringify(data, null , 2));
 
         // OK status sent
-        res.status(200).sendFile(__dirname + "/client/index.html");
+        res.status(303).redirect("/home");
     });
 });
 
@@ -92,6 +92,17 @@ app.get("/api/userexercises", (req,res) => {
             return res.status(404).send("404 not found. The requested resource was not found");
         }
         res.status(200).sendFile(__dirname + "/data/userexercises.json");
+    });
+});
+
+// Comments API route
+app.get("/api/comments", (req,res) => {
+    fs.access(__dirname + "/data/comments.json", fs.constants.F_OK, (err) => {
+
+        if (err) {
+            return res.status(404).send("404 not found. The requested resource was not found");
+        }
+        res.status(200).sendFile(__dirname + "/data/comments.json");
     });
 });
 

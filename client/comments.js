@@ -1,0 +1,50 @@
+// Once DOM content loaded the tables are populated
+document.addEventListener("DOMContentLoaded", buildComments);
+
+// Function to fill tables
+function buildComments() {
+
+    // Fetch the JSON data from the API
+    fetch("http://localhost:3000/api/comments")
+
+        // Parse data
+        .then(response => response.json())
+
+        // Populate comments
+        .then(data => {
+            let comments = document.getElementById("comment-section")
+
+            data.forEach(item => {
+                const border = document.createElement("div")
+                border.classList.add("post-comment", "border", "p-3", "rounded", "mb-3",  "bg-light")
+
+                const userMeta = document.createElement("div");
+                userMeta.classList.add("user-meta");
+
+                const userName = document.createElement("h5");
+                userName.classList.add("m-0", "user-name");
+                userName.textContent = item.name;
+
+                userMeta.appendChild(userName);
+
+                const commentMeta = document.createElement("div");
+                commentMeta.classList.add("comment-meta", "mt-2", "text-start");
+
+                const commentText = document.createElement("p");
+                commentText.classList.add("m-0", "comment-text");
+                commentText.textContent = item.comment;
+
+                commentMeta.appendChild(commentText);
+
+                border.appendChild(userMeta);
+                border.appendChild(commentMeta);
+                comments.appendChild(border)
+            })
+        })
+
+        .catch((err) =>
+            console.error("There was an issue fetching the data: ", err)
+        );
+
+
+}

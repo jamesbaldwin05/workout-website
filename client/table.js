@@ -13,7 +13,7 @@ function buildTables() {
         // Populate table
         .then(data => {
             // Select the body of the table to fill
-            let tableBody = document.querySelector("#exerciseTable tbody");
+            let tableBody = document.getElementById("exerciseTable");
 
             // For each JSON object create a row and fill it with the data
             data.forEach(item => {
@@ -55,7 +55,7 @@ function buildTables() {
     fetch("http://localhost:3000/api/userexercises")
         .then(response => response.json())
         .then(data => {
-            let tableBody = document.querySelector("#userExerciseTable tbody");
+            let tableBody = document.getElementById("userExerciseTable");
 
             data.forEach(item => {
                 let row = document.createElement("tr");
