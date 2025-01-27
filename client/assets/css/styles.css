@@ -1,4 +1,6 @@
-/* CSS styles created by generative AI */
+/* This whole file was written ritten by generative AI (ChatGPT) using the prompt
+ "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
+ and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". I take no credit to anything on this page */
 
 body {
     background-color: #eef1f5;
@@ -249,63 +251,57 @@ form button:hover {
     transform: scale(1.03);
 }
 
-.comment-section {
+.commentSection {
     max-width: 800px;
-    margin-top: 30px;
+    margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #ffffff;
     border: 1px solid #d3d6db;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.post-comment {
+.postComment {
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 5px;
     background-color: #f9fafb;
     border-radius: 10px;
     border: 1px solid #e2e8f0;
 }
 
-.user-meta {
+.userMeta {
     margin-bottom: 5px;
 }
 
-.user-name {
+.userName {
     font-size: 1.1rem;
     font-weight: bold;
     color: #4a5568;
 }
 
-.comment-post {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-.post-comment:hover {
+.postComment:hover {
     background-color: #e2e8f0;
     transform: scale(1.02);
     transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .comment-section {
+    .commentSection {
         padding: 15px;
         margin-top: 20px;
     }
 
-    .post-comment {
+    .postComment {
         padding: 10px;
     }
 
-    .user-name {
+    .userName {
         font-size: 1rem;
     }
 
-    .comment-post {
+    .commentPost {
         font-size: 0.875rem;
     }
 }

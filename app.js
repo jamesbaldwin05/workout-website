@@ -24,7 +24,7 @@ app.get("/home", function(req, res){
 });
 
 // Post method to add new exercise
-app.post('/home', (req, res) => {
+app.post('/new-exercise', (req, res) => {
     fs.access(__dirname + "/data/userexercises.json", fs.constants.F_OK, (err) => {
 
         if (err) {
@@ -43,8 +43,8 @@ app.post('/home', (req, res) => {
         // Data written back to file
         fs.writeFileSync(__dirname + "/data/userexercises.json", JSON.stringify(data, null , 2));
 
-        // OK status sent
-        res.status(200).sendFile(__dirname + "/client/index.html");
+        // OK status sent and redirect to home
+        res.redirect(303, "/home").status(303);
     });
 });
 
@@ -68,8 +68,8 @@ app.post("/comment", (req, res) => {
         // Data written back to file
         fs.writeFileSync(__dirname + "/data/comments.json", JSON.stringify(data, null , 2));
 
-        // OK status sent
-        res.status(303).redirect("/home");
+        // OK status sent and redirect to home
+        res.redirect("/home").status(303);
     });
 });
 

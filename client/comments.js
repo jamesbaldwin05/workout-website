@@ -12,34 +12,34 @@ function buildComments() {
 
         // Populate comments
         .then(data => {
-            let comments = document.getElementById("comment-section")
+            let comments = document.getElementById("commentSection");
 
             data.forEach(item => {
-                const border = document.createElement("div")
-                border.classList.add("post-comment", "border", "p-3", "rounded", "mb-3",  "bg-light")
+                const border = document.createElement("div");
+                border.classList.add("postComment", "border", "p-3", "rounded", "mb-3",  "bg-light");
 
                 const userMeta = document.createElement("div");
-                userMeta.classList.add("user-meta");
+                userMeta.classList.add("userMeta");
 
                 const userName = document.createElement("h5");
-                userName.classList.add("m-0", "user-name");
+                userName.classList.add("m-0", "userName");
                 userName.textContent = item.name;
 
                 userMeta.appendChild(userName);
 
                 const commentMeta = document.createElement("div");
-                commentMeta.classList.add("comment-meta", "mt-2", "text-start");
+                commentMeta.classList.add("mt-2");
 
                 const commentText = document.createElement("p");
-                commentText.classList.add("m-0", "comment-text");
+                commentText.classList.add("m-0");
                 commentText.textContent = item.comment;
 
                 commentMeta.appendChild(commentText);
 
                 border.appendChild(userMeta);
                 border.appendChild(commentMeta);
-                comments.appendChild(border)
-            })
+                comments.appendChild(border);
+            });
         })
 
         .catch((err) =>

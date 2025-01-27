@@ -1,4 +1,6 @@
-<!-- Styling for page (boostrap classes, div) written by generative AI, everything else written by me-->
+<!-- Styling for page (boostrap classes) written by generative AI (ChatGPT) using the prompt
+ "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
+ and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". All other HTML written by me-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,35 +50,33 @@
             </tbody>
         </table>
         <br>
-        <div class="text-center">
+        <div id="userExerciseButton" class="text-center">
             <button onclick="location.href='new.html'">New Exercise</button>
         </div>
         <br>
-        <br>
         <h1>Comments</h1>
         <div class="container mt-4">
-            <div id="comment-section" class="post-comment border p-3 rounded mb-3 bg-light">
-
-            <div id="new-comment" class="p-3 rounded mb-3 bg-light">
-                <form action="/comment" method="POST">
-                    <div class="mb-3">
-                        <input 
-                            type="text" 
-                            name="name" 
-                            class="form-control" 
-                            placeholder="Your name" 
-                        >
-                        <textarea 
-                            name="comment" 
-                            class="form-control" 
-                            cols="30" 
-                            rows="3" 
-                            placeholder="Your message"
-                        ></textarea>
-                    </div>
-                    <button >Comment</button>
-                </form>
-            </div>
+            <div id="commentSection" class="post-comment border p-3 rounded mb-3 bg-light">
+                <div id="newComment" class="p-3 rounded mb-3 bg-light">
+                    <form action="/comment" method="POST">
+                        <div class="mb-3">
+                            <input 
+                                type="text" 
+                                name="name" 
+                                class="form-control" 
+                                placeholder="Your name" 
+                            >
+                            <textarea 
+                                name="comment" 
+                                class="form-control" 
+                                cols="30" 
+                                rows="3" 
+                                placeholder="Your message"
+                            ></textarea>
+                        </div>
+                        <button >Comment</button>
+                    </form>
+                </div>
             </div>
         </div>
 

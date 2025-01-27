@@ -29,6 +29,19 @@ describe("Test the app", () => {
             .expect("Content-type", /json/);
     });
 
+    // Test API comments route
+    test("GET /api/comments", () => {
+        return request(app)
+            .get("/api/comments")
+            .expect(200);
+    });
+
+    test("GET /api/comments returns JSON", () => {
+        return request(app)
+            .get("/api/comments")
+            .expect("Content-type", /json/);
+    });
+
     // Test home route
     test("GET /home", () => {
         return request(app)
@@ -47,13 +60,33 @@ describe("Test the app", () => {
             .expect(/userExerciseTable/);
     });
 
-    // Test post method for home works as expected
-    test("POST /home", () => {
+    test("GET /home includes new user exercise button", () => {
+        return request(app)
+            .get("/home")
+            .expect(/userExerciseButton/);
+    });
+
+    test("GET /home includes comment section", () => {
+        return request(app)
+            .get("/home")
+            .expect(/commentSection/);
+    });
+
+    // Test post method for user exercises works as expected
+    test("POST /new-exercise", () => {
         const params ={"name": "Hammer Curl", "muscle": "Arms", "difficulty": "Medium","equipment": "Dumbbell","image": ""};
         return request(app)
-        .post('/home')
+        .post('/new-exercise')
         .send(params)
-	    .expect(200);
+	    .expect(303);
+    });
 
+    // Test post method for comments works as expected
+    test("POST /comment", () => {
+        const params ={"name": "John", "comment": "This came from the jest test"};
+        return request(app)
+        .post('/comments')
+        .send(params)
+	    .expect(303);
     });
 });
