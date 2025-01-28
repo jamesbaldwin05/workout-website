@@ -74,7 +74,7 @@ describe("Test the app", () => {
 
     // Test post method for user exercises works as expected
     test("POST /new-exercise", () => {
-        const params ={"name": "Hammer Curl", "muscle": "Arms", "difficulty": "Medium","equipment": "Dumbbell","image": ""};
+        const params = {"name": "Hammer Curl", "muscle": "Arms", "difficulty": "Medium","equipment": "Dumbbell","image": ""};
         return request(app)
         .post('/new-exercise')
         .send(params)
@@ -83,9 +83,9 @@ describe("Test the app", () => {
 
     // Test post method for comments works as expected
     test("POST /comment", () => {
-        const params ={"name": "John", "comment": "This came from the jest test"};
+        const params = {"name": "John", "comment": "This came from the jest test"};
         return request(app)
-        .post('/comments')
+        .post('/comment')
         .send(params)
 	    .expect(303);
     });

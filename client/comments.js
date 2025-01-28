@@ -45,6 +45,4 @@ function buildComments() {
         .catch((err) =>
             console.error("There was an issue fetching the data: ", err)
         );
-
-
 }

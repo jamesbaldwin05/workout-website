@@ -2,7 +2,7 @@
  "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
  and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". I take no credit to anything on this page */
 
-body {
+ body {
     background-color: #eef1f5;
     font-family: 'Helvetica Neue', sans-serif;
     padding: 20px;
