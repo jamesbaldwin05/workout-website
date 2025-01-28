@@ -1,5 +1,5 @@
 <!-- Styling for page (boostrap classes) written by generative AI (ChatGPT) using the prompt
- "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
+ "Generate CSS using boostrap for the above page [index.html and new.html pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
  and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". All other HTML written by me-->
 
 <!DOCTYPE html>
@@ -13,53 +13,61 @@
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet">
     </head>
+
     <body>
         <div id="newFormDiv">
         <h1>New Exercise</h1>
             <form class="form-control shadow-sm p-4" id="newExerciseForm" method="POST" action="/new-exercise">
-            <div class="mb-3">
-                <label for="newExerciseFormName" class="form-label">Name</label>
-                <input id="newExerciseFormName" name="name" type="text" class="form-control" placeholder="Enter exercise name">
-            </div>
-            <div class="mb-3">
-                <label for="newExerciseFormMuscle" class="form-label">Muscle</label>
-                <select class="form-select" id="newExerciseFormMuscle" name="muscle">
-                    <option value="Chest">Chest</option>
-                    <option value="Back">Back</option>
-                    <option value="Legs">Legs</option>
-                    <option value="Arms">Arms</option>
-                    <option value="Shoulders">Shoulders</option>
-                    <option value="Core">Core</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="newExerciseFormDifficulty" class="form-label">Difficulty</label>
-                <select class="form-select" id="newExerciseFormDifficulty" name="difficulty">
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="newExerciseFormEquipment" class="form-label">Equipment</label>
-                <select class="form-select" id="newExerciseFormEquipment" name="equipment">
-                    <option value="Barbell">Barbell</option>
-                    <option value="Dumbbell">Dumbbell</option>
-                    <option value="Kettlebell">Kettlebell</option>
-                    <option value="Machine">Machine</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="newExerciseFormImage" class="form-label">Image (optional). Must be a URL.</label>
-                <input class="form-control" id="newExerciseFormImage" name="image" type="text" placeholder="Enter image url">
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+                <div class="mb-3">
+                    <label for="newExerciseFormName" class="form-label">Name</label>
+                    <input id="newExerciseFormName" name="name" type="text" class="form-control" placeholder="Enter exercise name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="newExerciseFormMuscle" class="form-label">Muscle</label>
+                    <select class="form-select" id="newExerciseFormMuscle" name="muscle">
+                        <option value="Chest">Chest</option>
+                        <option value="Back">Back</option>
+                        <option value="Legs">Legs</option>
+                        <option value="Arms">Arms</option>
+                        <option value="Shoulders">Shoulders</option>
+                        <option value="Core">Core</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="newExerciseFormDifficulty" class="form-label">Difficulty</label>
+                    <select class="form-select" id="newExerciseFormDifficulty" name="difficulty">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="newExerciseFormEquipment" class="form-label">Equipment</label>
+                    <select class="form-select" id="newExerciseFormEquipment" name="equipment">
+                        <option value="Barbell">Barbell</option>
+                        <option value="Dumbbell">Dumbbell</option>
+                        <option value="Kettlebell">Kettlebell</option>
+                        <option value="Machine">Machine</option>
+                        <option value="Cables">Machine</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="newExerciseFormImage" class="form-label">Image (optional). Must be a URL.</label>
+                    <input class="form-control" id="newExerciseFormImage" name="image" type="text" placeholder="Enter image url">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
             </form>
         </div>
-            <script src="assets/dist/js/bootstrap.min.js"></script>
+
+        <script src="assets/dist/js/bootstrap.min.js"></script>
     </body>
 </html>

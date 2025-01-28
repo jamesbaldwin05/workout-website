@@ -1,5 +1,5 @@
 <!-- Styling for page (boostrap classes) written by generative AI (ChatGPT) using the prompt
- "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
+ "Generate CSS using boostrap for the above page [index.html and new.html pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
  and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". All other HTML written by me-->
 
 <!DOCTYPE html>
@@ -10,7 +10,6 @@
         <title>Exercise app</title>
         <script src="table.js"></script>
         <script src="comments.js"></script>
-        <script src="./assets/dist/js/sorttable.js"></script>
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/styles.css" rel="stylesheet">
     </head>
@@ -31,9 +30,9 @@
 
             </tbody>
         </table>
-
         <p>All images above designed by <a href="https://www.freepik.com">Freepik</a></p>
         <br>
+
         <h1>User Exercises</h1>
         <table id="userExerciseTable" class="table table-bordered table-hover">
             <thead class="thead-light">
@@ -50,10 +49,12 @@
             </tbody>
         </table>
         <br>
+
         <div id="userExerciseButton" class="text-center">
             <button onclick="location.href='new.html'">New Exercise</button>
         </div>
         <br>
+        
         <h1>Comments</h1>
         <div class="container mt-4">
             <div id="commentSection" class="post-comment border p-3 rounded mb-3 bg-light">

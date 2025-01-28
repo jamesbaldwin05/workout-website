@@ -1,6 +1,6 @@
-/* This whole file was written ritten by generative AI (ChatGPT) using the prompt
- "Generate CSS using boostrap for the above page [HTML pasted above]. It should have a white and light-grey colour scheme with light grey buttons. It should be responsive 
- and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". I take no credit to anything on this page */
+/* This whole file was written by generative AI (ChatGPT) using the prompt
+ "Generate CSS using boostrap for the above page [index.html and new.html pasted above]. It should have a white and light-grey colour scheme with light grey buttons.
+  It should be responsive and mobile friendly. Add bootstrap classes to the html if you need but don't change anything else". I take no credit to anything in this file*/
 
  body {
     background-color: #eef1f5;
