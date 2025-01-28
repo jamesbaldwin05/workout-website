@@ -131,8 +131,8 @@ Created entirely by myself, unless stated otherwise in a comment at the top of t
 **Request**: None required.
 
 **Response**:
-* 200 (OK): Retrieve a list of comments added by users in JSON format.
-```json
+* 200 (OK): Sends the index.html file to display the webpage.
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
