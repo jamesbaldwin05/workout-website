@@ -15,7 +15,7 @@ Created entirely by myself, unless stated otherwise in a comment at the top of t
 
 **Response**:
 * 200 (OK): Returns a list of exercises in JSON format.
-```html
+```json
 [
     {
         "name":"Bench Press",
