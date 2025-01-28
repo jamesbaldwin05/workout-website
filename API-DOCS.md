@@ -14,7 +14,7 @@ Created entirely by myself, unless stated otherwise in a comment at the top of t
 **Request**: None required.
 
 **Response**:
-* 200 (OK): Returns a HTML file displaying the app.
+* 200 (OK): Returns a list of exercises in JSON format.
 ```html
 [
     {
